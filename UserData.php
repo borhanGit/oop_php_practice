@@ -2,6 +2,7 @@
 class UserData {
     public $user;
     public $userId;
+    const NAME = "MR.BORHAN UDDIN";
 
     public function __construct($user,$userId)
     {
@@ -15,10 +16,16 @@ class UserData {
         unset($this->user);
         unset($this->userId);
     }
+    public  function display()
+    {
+        echo "The Full Name is :". UserData::NAME;
+    }
 
 }
 $user = "borhan";
 $userId = 123;
 
 $userObj = new UserData($user,$userId);
+echo "<br>";
+$userObj->display();
 ?>
