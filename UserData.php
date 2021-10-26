@@ -3,6 +3,7 @@ class UserData {
     public $user;
     public $userId;
     const NAME = "MR.BORHAN UDDIN";
+    public static $age = 30;
 
     public function __construct($user,$userId)
     {
@@ -16,8 +17,9 @@ class UserData {
         unset($this->user);
         unset($this->userId);
     }
-    public  function display()
+    public static  function display()
     {
+        echo "the age is : " . self::$age;
         echo "The Full Name is :". UserData::NAME;
     }
 
@@ -28,4 +30,9 @@ $userId = 123;
 $userObj = new UserData($user,$userId);
 echo "<br>";
 $userObj->display();
+UserData::display();
+
+
+
+
 ?>

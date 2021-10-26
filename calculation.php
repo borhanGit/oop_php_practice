@@ -3,6 +3,7 @@ class Calculation {
     
     function add($a,$b)
     {
+        for($i=1;)
         echo "sumation = " .($a+$b)."<br>";
     }
     function sub($a,$b)
